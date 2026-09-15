@@ -1,4 +1,5 @@
 package com.aribnb.backend.entity;
 
-public class UserType {
+public enum UserType {
+    HOST, GUEST, ADMIN
 }
