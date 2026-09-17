@@ -14,7 +14,7 @@ import java.util.Date;
 
 @Component
 public class JwtUtil {
-    @Value("${jwt.secret:AIRBNBBACKENDSYSTEMPROJECT}")
+    @Value("${jwt.secret:AIRBNBBACKENDSYSTEMPROJECTSURYA}")
     private String secretKey;
 
     @Value("${jwt.expiration:86400000}")
