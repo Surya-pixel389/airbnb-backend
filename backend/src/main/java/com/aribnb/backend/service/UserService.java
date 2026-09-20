@@ -29,8 +29,10 @@ public class UserService {
         if (userRespository.existsByEmail(request.getEmail())){
             throw new RuntimeException("Email already exists");
     }
+        String hashedPassword = password.encode(request.getPassword());
         user usr = user.builder()
                 .email(request.getEmail())
+                .password(hashedPassword)
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
                 .userType(UserType.valueOf(request.getUserType().toUpperCase()))
